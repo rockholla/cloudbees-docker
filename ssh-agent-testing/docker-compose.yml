@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  ssh_agent:
+    container_name: ssh_agent
+    build:
+      context: ./ssh_agent
+    image: cloudbees/ssh_agent:testing
+  cjoc:
+    container_name: cjoc
+    build:
+      context: ./cjoc
+    image: cloudbees/cjoc:testing
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    links:
+      - ssh_agent

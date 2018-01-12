@@ -9,6 +9,7 @@ services:
     ports:
       - "50000:50000"
       - "8080:8080"
+      - "9090:9090"
     volumes:
       - ./.m2:/root/.m2
       - ./bin:/root/bin

@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  cloudbees_dse_workspace:
+    container_name: cloudbees_dse_workspace
+    build:
+      context: .
+    image: cloudbees/dse-workspace:local
+    volumes:
+      - ./.m2:/root/.m2
+      - ./bin:/root/bin
+      - ./insights:/root/insights
+      - ./shinobi-tools:/root/shinobi-tools
+      - ./support:/root/support

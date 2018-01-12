@@ -1,0 +1,9 @@
+.DS_Store
+config
+support/*
+!support/.keep
+.m2/*
+!.m2/.keep
+insights
+kb-articles
+shinobi-tools

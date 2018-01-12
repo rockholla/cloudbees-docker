@@ -1,0 +1,20 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+
+set nexus_url [lindex $argv 0]
+set nexus_username [lindex $argv 1]
+set nexus_password [lindex $argv 2]
+set nexus_template [lindex $argv 3]
+
+spawn mvn org.sonatype.plugins:nexus-m2settings-maven-plugin:download
+expect "Nexus URL:"
+send "${nexus_url}\r"
+expect "Username"
+send "${nexus_username}\r"
+expect "Password:"
+send "${nexus_password}\r"
+
+expect "Select Template:"
+send "${nexus_template}\r"
+expect eof

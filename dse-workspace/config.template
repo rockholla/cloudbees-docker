@@ -1,0 +1,12 @@
+maven_master_password=[a random password of your choosing]
+
+nexus_url=https://nexus-internal.cloudbees.com
+nexus_username=[your ldap username]
+nexus_password=[your ldap password]
+nexus_template=1
+
+zendesk_username=[your cloudbees email]
+zendesk_password=[your ldap password]
+
+git_name=[your git user.name]
+git_email=[your git user.email]

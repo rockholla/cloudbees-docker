@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -z "${nexus_url}" ]; then
+  source /root/config
+fi
+echo "Maven Download of Dependencies from CloudBees Internal Nexus..."
+nexus-download-expect "${nexus_url}" "${nexus_username}" "${nexus_password}" "${nexus_template}"
